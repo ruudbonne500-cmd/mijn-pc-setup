@@ -1,0 +1,7 @@
+# Kopieer dit naar C:\Users\<jouwnaam>\.wslconfig op Windows
+# Daarna in PowerShell: wsl --shutdown
+
+[wsl2]
+memory=12GB
+processors=4
+swap=4GB
