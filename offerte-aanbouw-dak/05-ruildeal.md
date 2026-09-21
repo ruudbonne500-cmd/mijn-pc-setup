@@ -24,20 +24,38 @@ Ik reken hier met het middenscenario uit `02-calculatie.md`. Vul jouw eigen geta
 
 | Wat | Bedrag | Krijg je dat terug? |
 | --- | --- | --- |
-| Materiaal bij de leverancier | 3.250 | Nee. Die factuur betaal je gewoon. |
-| Loon van je mensen (2 man x 2,5 dag x 8 uur x 45) | 1.800 | Nee. Die krijgen gewoon uitbetaald. |
-| Steiger, container, transport | 650 | Nee. |
-| **Kostprijs: echt geld de deur uit** | **5.700** | |
-| Jouw marge (7.000 offerte min 5.700 kostprijs) | 1.300 | Dit is het enige dat je kunt weggeven. |
+| Materiaal bij de leverancier | 3.100 | Nee. Die factuur betaal je gewoon. |
+| Loon van je mensen (2 man x 3 dagen x 8 uur x 45) | 2.160 | Nee. Die krijgen gewoon uitbetaald. |
+| Steiger, container, gas, transport | 650 | Nee. |
+| **Kostprijs: echt geld de deur uit** | **5.910** | |
+| Jouw marge (6.639 offerte min 5.910 kostprijs) | 729 | Dit is het enige dat je kunt weggeven. |
 
-**Dus:** "gratis" kost je geen 0 euro. Het kost je **5.700 euro cash**, plus 2,5 dag waarin je geen betaald werk doet.
+**Dus:** "gratis" kost je geen 0 euro. Het kost je **5.910 euro cash**, plus 3 dagen waarin je geen betaald werk doet.
 
 Onthoud dit ene getal:
 
-> **Je kunt 1.300 euro weggeven. Niet 7.000.**
+> **Je kunt ongeveer 730 euro weggeven. Niet 6.639.**
 
 Als die video's je 4 nieuwe daken opleveren: prima deal.
-Als ze er 0 opleveren: je hebt 5.700 euro betaald voor een ervaring.
+Als ze er 0 opleveren: je hebt 5.910 euro betaald voor een ervaring.
+
+---
+
+## Waarom bitumen deze deal moeilijker maakt
+
+Dit is belangrijk en het is niet wat je zou verwachten.
+
+| | Bitumen | EPDM |
+| --- | --- | --- |
+| Wat Roy betaalt (excl. BTW) | 6.639 | 7.003 |
+| Wat jij kwijt bent | 5.910 | 5.700 |
+| **Wat jij overhoudt** | **729** | **1.303** |
+
+Bitumen is **goedkoper voor Roy, maar duurder voor jou**. Het materiaal scheelt ongeveer 150 euro in jouw voordeel, maar het kost je een halve tot hele dag meer werk: twee lagen aanbrengen in plaats van een vel uitrollen en verlijmen.
+
+Netto zakt je marge van ongeveer 1.300 naar ongeveer 730 euro.
+
+**Wat dat betekent voor de ruil:** je ruimte om iets weg te geven is bijna gehalveerd. Bij bitumen is "gratis doen" dus nog een slechter idee dan het al was. En als Roy alsnog voor EPDM kiest, heb je meteen 570 euro meer speelruimte in de onderhandeling. Dat is het noemen waard - niet als verkooptruc, gewoon als eerlijk advies aan een klant die ook nog betere garantie krijgt.
 
 ## De vier risico's
 
@@ -90,11 +108,11 @@ Ik reken met het middenscenario. **Vul je eigen getallen in.**
 
 | | |
 | --- | --- |
-| Offertebedrag excl. BTW | 7.000 |
-| BTW 21% | 1.470 |
-| Offertebedrag incl. BTW | 8.470 |
-| Jouw kostprijs (echt geld de deur uit) | 5.700 |
-| **Jouw marge** | **1.300** |
+| Offertebedrag excl. BTW | 6.639 |
+| BTW 21% | 1.394 |
+| Offertebedrag incl. BTW | 8.033 |
+| Jouw kostprijs (echt geld de deur uit) | 5.910 |
+| **Jouw marge** | **729** |
 
 ---
 
@@ -122,36 +140,36 @@ Contentwaarde = het hele offertebedrag.
 
 | | Bedrag |
 | --- | --- |
-| Jouw factuur aan hem | 8.470 |
-| Zijn factuur aan jou | 8.470 |
+| Jouw factuur aan hem | 8.033 |
+| Zijn factuur aan jou | 8.033 |
 | Hij maakt over | **0** |
-| 7.000 - 7.000 - 5.700 | |
-| **Onder de streep** | **-5.700** |
+| 6.639 - 6.639 - 5.910 | |
+| **Onder de streep** | **-5.910** |
 
-**Oordeel: niet doen.** Je financiert een ander zijn dak met 5.700 euro eigen geld. Bij tegenvallers heb je geen enkele buffer, en bij de volgende klus is dit je nieuwe vertrekpunt.
+**Oordeel: niet doen.** Je financiert een ander zijn dak met 5.910 euro eigen geld. Bij tegenvallers heb je geen enkele buffer, en bij de volgende klus is dit je nieuwe vertrekpunt.
 
 ---
 
 ## Model 2 - Kosten gedekt, alleen je marge geruild (MIJN ADVIES)
 
-Contentwaarde = precies je marge (1.300).
+Contentwaarde = precies je marge (729).
 
 | | Bedrag |
 | --- | --- |
-| Jouw factuur aan hem | 8.470 |
-| Zijn factuur aan jou (1.300 + 273 BTW) | 1.573 |
-| Hij maakt over | **6.897** |
-| 7.000 - 1.300 - 5.700 | |
-| **Onder de streep** | **0, plus 1.300 euro aan content** |
+| Jouw factuur aan hem | 8.033 |
+| Zijn factuur aan jou (729 + 153 BTW) | 882 |
+| Hij maakt over | **7.151** |
+| 6.639 - 729 - 5.910 | |
+| **Onder de streep** | **0, plus 729 euro aan content** |
 
-Van die 6.897 die binnenkomt draag je 1.197 netto BTW af. Er blijft 5.700 over, en dat is precies je kostprijs. Je komt dus schoon uit.
+Van die 7.151 die binnenkomt draag je 1.241 netto BTW af. Er blijft 5.910 over, en dat is precies je kostprijs. Je komt dus schoon uit.
 
 **Waarom dit het beste model is:**
 - Je leverancier en je mensen zijn betaald. Geen gat in je kas.
 - Je geeft alleen je winst weg, niet je geld.
 - Er staat een echt bedrag tegenover zijn content, dus de afspraak is concreet.
 - Het staat netjes in de boeken.
-- Hij krijgt nog steeds ruim 1.300 euro korting. Dat is een echt gebaar, geen fooi.
+- Hij krijgt ruim 700 euro korting. Bescheiden, maar het is wel je volledige winst.
 
 ---
 
@@ -161,19 +179,19 @@ Stel hij zegt: mijn content is 3.000 waard.
 
 | | Bedrag |
 | --- | --- |
-| Jouw factuur aan hem | 8.470 |
+| Jouw factuur aan hem | 8.033 |
 | Zijn factuur aan jou (3.000 + 630 BTW) | 3.630 |
-| Hij maakt over | **4.840** |
-| 7.000 - 3.000 - 5.700 | |
-| **Onder de streep** | **-1.700** |
+| Hij maakt over | **4.403** |
+| 6.639 - 3.000 - 5.910 | |
+| **Onder de streep** | **-2.272** |
 
-Dat is geen ramp als je die content echt 1.700 euro waard vindt bovenop je weggegeven marge. Maar weet dan wel dat je **1.700 euro uit eigen zak betaalt** om erbij te mogen staan. Neem dat besluit bewust, niet per ongeluk.
+Dat is geen ramp als je die content echt 2.272 euro waard vindt bovenop je weggegeven marge. Maar weet dan wel dat je **2.272 euro uit eigen zak betaalt** om erbij te mogen staan. Neem dat besluit bewust, niet per ongeluk.
 
 ---
 
 ## Het getal waar het om draait
 
-> **Break-evenpunt = je marge = 1.300 euro.**
+> **Break-evenpunt = je marge = 729 euro.**
 
 Boven die grens leg je toe. Onder die grens verdien je. Zo simpel is het.
 
@@ -185,7 +203,7 @@ Gebruik `rekenblad.html` om dit met je eigen cijfers te zien - daar schuift het 
 
 | | Model 1 | Model 2 | Model 3 |
 | --- | --- | --- | --- |
-| Uit eigen zak | -5.700 | 0 | -1.700 |
+| Uit eigen zak | -5.910 | 0 | -2.272 |
 | Je hebt een drukmiddel | Nee | Ja | Ja |
 | Administratief netjes | Ja | Ja | Ja |
 | Risico als video's uitblijven | Groot | Klein | Klein |
@@ -198,7 +216,7 @@ Gebruik `rekenblad.html` om dit met je eigen cijfers te zien - daar schuift het 
 Welk model je ook kiest, doe dit erbij. Het kost je niks en het dekt alles af.
 
 1. **Materiaal vooruit.** Hij betaalt de materiaalkosten voordat jij bestelt. Geen materiaal betaald, geen materiaal besteld.
-2. **Factureer het volledige bedrag** (8.470), met deze zin erbij:
+2. **Factureer het volledige bedrag** (8.033), met deze zin erbij:
    > *"Van dit bedrag wordt [bedrag] kwijtgescholden zodra de in de samenwerkingsafspraak genoemde content volledig is geleverd en geplaatst, uiterlijk op [datum]."*
 3. **Content geleverd?** Je stuurt een creditnota. Klaar, iedereen blij.
 4. **Content niet geleverd voor die datum?** De factuur staat er nog gewoon en is opeisbaar.

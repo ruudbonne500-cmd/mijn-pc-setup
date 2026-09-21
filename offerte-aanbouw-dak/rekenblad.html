@@ -274,7 +274,7 @@ footer.colofon b{color:var(--ink-2)}
 
   <div class="lede">
     <h1>Wat kost dit dak, en wat kun je weggeven?</h1>
-    <p>Geïsoleerd EPDM-platdak op een aanbouw van 45,5 m². Vul je eigen inkoopprijzen en uurtarief in — dan weet je twee dingen: wat je normaal vraagt, en hoeveel je in een ruildeal kwijt kunt zonder erop toe te leggen.</p>
+    <p>Geïsoleerd bitumen platdak op een aanbouw van 45,5 m², twee lagen: zelfklevende onderlaag met een gebrande toplaag erop. Vul je eigen inkoopprijzen en uurtarief in — dan weet je twee dingen: wat je normaal vraagt, en hoeveel je in een ruildeal kwijt kunt zonder erop toe te leggen.</p>
   </div>
 
   <!-- ============ 1. MATEN ============ -->
@@ -305,6 +305,16 @@ footer.colofon b{color:var(--ink-2)}
   <section class="panel">
     <header><h2>2 &middot; Wat je aanbiedt</h2><span class="hint">prijzen zijn geleverd &eacute;n aangebracht — materiaal + arbeid</span></header>
     <div class="body">
+      <div class="grid g3">
+        <label class="field"><span class="lab">Dakbedekking</span>
+          <select id="dekking">
+            <option value="bitumen" selected>Bitumen 2-laags — wat Roy vroeg</option>
+            <option value="epdm">EPDM 1,5 mm — ter vergelijking</option>
+          </select>
+        </label>
+      </div>
+      <p class="note" id="dekkingHint">Wisselen past de prijsregel aan én zet je materiaalbedrag en werkdagen in blok 3 terug op de richtwaarde voor die opbouw. Bitumen is twee lagen en dus meer handwerk dan één vel EPDM.</p>
+
       <div class="scroll">
         <table>
           <caption>Standaardwerk</caption>
@@ -331,15 +341,15 @@ footer.colofon b{color:var(--ink-2)}
     <header><h2>3 &middot; Jouw kostprijs</h2><span class="hint">het geld dat echt de deur uit gaat</span></header>
     <div class="body">
       <div class="grid g3">
-        <label class="field"><span class="lab">Materiaal inkoop (&euro;)</span><input type="text" inputmode="decimal" id="kMat" value="3250"></label>
+        <label class="field"><span class="lab">Materiaal inkoop (&euro;)</span><input type="text" inputmode="decimal" id="kMat" value="3100"></label>
         <label class="field"><span class="lab">Overig: steiger, container, transport (&euro;)</span><input type="text" inputmode="decimal" id="kOver" value="650"></label>
         <label class="field"><span class="lab">Kostprijs per manuur (&euro;)</span><input type="text" inputmode="decimal" id="kTar" value="45"></label>
       </div>
       <div class="grid g4">
         <label class="field"><span class="lab">Man op het dak</span><input type="text" inputmode="decimal" id="kMan" value="2"></label>
-        <label class="field"><span class="lab">Werkdagen</span><input type="text" inputmode="decimal" id="kDag" value="2,5"></label>
+        <label class="field"><span class="lab">Werkdagen</span><input type="text" inputmode="decimal" id="kDag" value="3"></label>
         <label class="field"><span class="lab">Uren per dag</span><input type="text" inputmode="decimal" id="kUur" value="8"></label>
-        <label class="field"><span class="lab">Manuren totaal</span><input type="text" id="kUurTot" value="40" readonly tabindex="-1"></label>
+        <label class="field"><span class="lab">Manuren totaal</span><input type="text" id="kUurTot" value="48" readonly tabindex="-1"></label>
       </div>
 
       <div class="result">
@@ -421,6 +431,7 @@ footer.colofon b{color:var(--ink-2)}
   <footer class="colofon">
     <p><b>Richtprijzen, geen leveranciersprijzen.</b> De ingevulde bedragen zijn marktindicaties voor Nederland, 2026. Vervang ze door je eigen inkoop en je eigen uurtarief, anders klopt de uitkomst niet.</p>
     <p><b>Nog een BTW-punt.</b> Bij isolatiewerk aan woningen ouder dan twee jaar geldt soms 9% over de arbeid. Bij een nieuwe aanbouw meestal gewoon 21%. Even bij je boekhouder checken — dat scheelt honderden euro's, de ene of de andere kant op.</p>
+    <p><b>Bitumen is goedkoper voor de klant, niet voor jou.</b> Het materiaal scheelt ongeveer 150 euro in jouw voordeel, maar twee lagen aanbrengen kost een halve tot hele dag meer dan één vel EPDM verlijmen. Zet de schakelaar in blok 2 om en kijk wat dat met je marge doet.</p>
     <p>Wat je hier invult blijft op dit apparaat staan. Het gaat nergens heen.</p>
   </footer>
 
@@ -444,13 +455,13 @@ footer.colofon b{color:var(--ink-2)}
 
   /* ---- posten ---- */
   var HOOFD = [
-    {id:'p1', naam:'Dampremmende laag',                        eenh:'m²', qty:'opp',  prijs:8,   lo:6,  hi:10},
-    {id:'p2', naam:'PIR-isolatie 145 mm, Rc 6,3',              eenh:'m²', qty:'opp',  prijs:47,  lo:40, hi:55},
-    {id:'p3', naam:'EPDM 1,5 mm, volledig verkleefd',          eenh:'m²', qty:'opp',  prijs:50,  lo:40, hi:60},
+    {id:'p1', naam:'Primer + bitumen dampremmende laag',       eenh:'m²', qty:'opp',  prijs:8,   lo:6,  hi:10},
+    {id:'p2', naam:'PIR-isolatie 145 mm, Rc 6,3, gecacheerd',  eenh:'m²', qty:'opp',  prijs:47,  lo:40, hi:55},
+    {id:'p3', naam:'Bitumen 2-laags — onderlaag zelfklevend, toplaag gebrand', eenh:'m²', qty:'opp', prijs:42, lo:34, hi:52},
     {id:'p4', naam:'Aluminium daktrim',                        eenh:'m1', qty:'trim', prijs:28,  lo:22, hi:35},
-    {id:'p5', naam:'Muuraansluiting + loodslabbe',              eenh:'m1', qty:'muur', prijs:45,  lo:35, hi:55},
+    {id:'p5', naam:'Muuraansluiting, brandvrij gedetailleerd', eenh:'m1', qty:'muur', prijs:45,  lo:35, hi:55},
     {id:'p6', naam:'Hemelwaterafvoer, compleet',               eenh:'st', qty:1,      prijs:275, lo:200,hi:350, qtyEdit:true},
-    {id:'p7', naam:'Kleinmateriaal, hoekstukken, lijm, kit',   eenh:'post',qty:1,     prijs:325, lo:250,hi:400},
+    {id:'p7', naam:'Kleinmateriaal, primer, gas, hoekstukken', eenh:'post',qty:1,     prijs:325, lo:250,hi:400},
     {id:'p8', naam:'Steiger en materieel',                      eenh:'post',qty:1,     prijs:450, lo:300,hi:600},
     {id:'p9', naam:'Afvoer bouwafval en transport',             eenh:'post',qty:1,     prijs:300, lo:200,hi:400}
   ];
@@ -604,6 +615,29 @@ footer.colofon b{color:var(--ink-2)}
     save();
   }
 
+  /* ---- wisselen van dakbedekking ---- */
+  var DEKKING = {
+    bitumen:{ naam:'Bitumen 2-laags — onderlaag zelfklevend, toplaag gebrand', prijs:'42', lo:34, hi:52, mat:'3100', dagen:'3' },
+    epdm:   { naam:'EPDM 1,5 mm, volledig verkleefd',                          prijs:'50', lo:40, hi:60, mat:'3250', dagen:'2,5' }
+  };
+  /* label en bandbreedte van de regel laten meelopen met de keuze */
+  function toonDekking(){
+    var d = DEKKING[$('dekking').value];
+    if(!d) return;
+    $('row_p3').cells[0].textContent = d.naam;
+    document.querySelector('#row_p3 .range').innerHTML = d.lo + '&ndash;' + d.hi;
+  }
+  /* alleen bij een echte wissel ook de richtwaarden terugzetten */
+  $('dekking').addEventListener('change', function(){
+    var d = DEKKING[this.value];
+    if(!d) return;
+    toonDekking();
+    $('pr_p3').value = d.prijs;
+    $('kMat').value  = d.mat;
+    $('kDag').value  = d.dagen;
+    calc();
+  });
+
   document.addEventListener('input', calc);
   document.addEventListener('change', calc);
 
@@ -613,6 +647,7 @@ footer.colofon b{color:var(--ink-2)}
   });
 
   load();
+  toonDekking();
   calc();
 })();
 </script>

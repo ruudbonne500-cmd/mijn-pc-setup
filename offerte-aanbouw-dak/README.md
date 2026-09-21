@@ -2,7 +2,7 @@
 
 Alles wat je nodig hebt om Roy een net antwoord te sturen.
 
-**Situatie:** aanbouw 7,00 x 6,50 m = 45,5 m2 plat dak.
+**Situatie:** aanbouw 7,00 x 6,50 m = 45,5 m2 **plat dak, bitumen 2-laags met isolatie**.
 Roy vraagt: (a) een normale offerte, en (b) of je het gratis wilt doen in ruil voor video's.
 
 ---
@@ -36,7 +36,19 @@ Daarnaast: **`rekenblad.html`** - open dit in je browser. Daarin schuif je je ei
 > **Materiaal betaal je met geld, niet met bereik.**
 
 Jouw leverancier stuurt een rekening van een paar duizend euro. Die rekening kun je niet betalen met video's.
-Dus: wat je ook afspreekt, de materiaalkosten komen altijd contant binnen. Zie `05-ruildeal.md`.
+Dus: wat je ook afspreekt, de kosten komen altijd contant binnen. Zie `05-ruildeal.md`.
+
+## En de belangrijkste getallen
+
+Met de middenprijzen uit `02-calculatie.md`:
+
+| | |
+| --- | --- |
+| Offerte | **6.639 excl. BTW** (8.033 incl.) |
+| Jouw kostprijs | **5.910** |
+| Wat je kunt weggeven | **729** |
+
+Bitumen is goedkoper voor Roy dan EPDM, maar **duurder voor jou**: een halve tot hele dag meer werk voor twee lagen. Je marge zakt daardoor van ongeveer 1.300 naar ongeveer 730 euro. Dat staat uitgelegd in `05-ruildeal.md`.
 
 ---
 
