@@ -1,0 +1,618 @@
+<title>Platdak Rekenblad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#F0F1EE;
+  --card:#FAFAF8;
+  --card-2:#E7E9E4;
+  --ink:#1C2024;
+  --ink-2:#5B626A;
+  --ink-3:#8A9198;
+  --rule:#D5D7D2;
+  --rule-2:#BFC2BC;
+  --brass:#9C6F14;
+  --brass-soft:#EFE3C6;
+  --good:#2C6A4A;
+  --good-soft:#DDEBE2;
+  --bad:#A23C2E;
+  --bad-soft:#F2DDD8;
+  --shadow:0 1px 2px rgba(28,32,36,.06);
+
+  --f-disp:"Barlow Condensed","Arial Narrow",Helvetica,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15171A;
+    --card:#1D2024;
+    --card-2:#262A2F;
+    --ink:#E9EAE7;
+    --ink-2:#9BA2A9;
+    --ink-3:#727981;
+    --rule:#2C3035;
+    --rule-2:#3C4147;
+    --brass:#D7A544;
+    --brass-soft:#3A2F14;
+    --good:#66AB86;
+    --good-soft:#1B3328;
+    --bad:#DA7A6C;
+    --bad-soft:#39211C;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15171A;
+  --card:#1D2024;
+  --card-2:#262A2F;
+  --ink:#E9EAE7;
+  --ink-2:#9BA2A9;
+  --ink-3:#727981;
+  --rule:#2C3035;
+  --rule-2:#3C4147;
+  --brass:#D7A544;
+  --brass-soft:#3A2F14;
+  --good:#66AB86;
+  --good-soft:#1B3328;
+  --bad:#DA7A6C;
+  --bad-soft:#39211C;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:15px;
+  line-height:1.5;
+  -webkit-text-size-adjust:100%;
+}
+h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;text-wrap:balance;line-height:1.1}
+p{margin:0}
+
+/* ---------- plakbalk ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:20;
+  background:var(--card);
+  border-bottom:1px solid var(--rule-2);
+  box-shadow:var(--shadow);
+}
+.bar-in{
+  max-width:1080px;margin:0 auto;
+  padding-block:10px;padding-left:16px;padding-right:16px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.bar-id{
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  font-family:var(--f-disp);
+  font-size:13px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.bar-id b{font-size:17px;letter-spacing:.05em;color:var(--ink);font-weight:700}
+.figs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.fig{background:var(--card);padding:7px 10px;min-width:0}
+.fig .k{
+  font-family:var(--f-disp);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-3);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;
+}
+.fig .v{font-family:var(--f-mono);font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.fig.lead{background:var(--brass-soft)}
+.fig.lead .v{color:var(--brass)}
+.fig .v.neg{color:var(--bad)}
+.fig .v.pos{color:var(--good)}
+.fig .sub{font-family:var(--f-mono);font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+/* ---------- pagina ---------- */
+main{max-width:1080px;margin:0 auto;padding-block:22px 40px;padding-left:16px;padding-right:16px;display:flex;flex-direction:column;gap:22px}
+
+.lede{display:flex;flex-direction:column;gap:8px;max-width:64ch}
+.lede h1{font-size:clamp(28px,6vw,40px);letter-spacing:-.01em}
+.lede p{color:var(--ink-2)}
+
+.panel{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.panel > header{
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  padding:11px 16px;
+  border-bottom:1px solid var(--rule);
+  background:var(--card-2);
+}
+.panel > header h2{font-size:17px;letter-spacing:.05em;text-transform:uppercase}
+.panel > header .hint{font-size:13px;color:var(--ink-2)}
+.panel .body{padding:16px;display:flex;flex-direction:column;gap:16px}
+
+.grid{display:grid;gap:12px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:720px){ .g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))} .figs{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:400px){ .g3,.g4{grid-template-columns:1fr} }
+
+label.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+label.field .lab{
+  font-family:var(--f-disp);font-size:12px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-2);
+}
+input[type=text],select{
+  width:100%;
+  font-family:var(--f-mono);font-size:15px;font-variant-numeric:tabular-nums;
+  padding:7px 9px;
+  color:var(--ink);
+  background:var(--paper);
+  border:1px solid var(--rule-2);
+  border-radius:3px;
+}
+select{font-family:var(--f-body)}
+input[type=text]:focus-visible,select:focus-visible,button:focus-visible,input[type=checkbox]:focus-visible{
+  outline:2px solid var(--brass);outline-offset:1px;
+}
+.derived{
+  display:flex;flex-wrap:wrap;gap:8px;
+  font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink-2);
+}
+.derived span{background:var(--card-2);border:1px solid var(--rule);border-radius:3px;padding:3px 8px}
+.derived b{color:var(--ink);font-weight:600}
+
+/* ---------- postentabel ---------- */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:560px}
+caption{
+  text-align:left;padding:0 0 8px;
+  font-family:var(--f-disp);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);
+}
+th,td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--rule)}
+th{
+  font-family:var(--f-disp);font-size:12px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--rule-2);
+  white-space:nowrap;
+}
+th:first-child,td:first-child{text-align:left}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+td .unit{font-size:12px;color:var(--ink-3);font-family:var(--f-body)}
+td input[type=text]{width:76px;padding:4px 6px;font-size:14px;text-align:right}
+td .range{display:block;font-family:var(--f-mono);font-size:11px;color:var(--ink-3);margin-top:2px}
+.chk{display:flex;align-items:center;gap:8px}
+.chk label{cursor:pointer}
+tr.off td{opacity:.45}
+tr.sum td{border-bottom:none;border-top:2px solid var(--ink);padding-top:9px;font-weight:600}
+tr.sum td.num{font-size:17px}
+input[type=checkbox]{
+  width:17px;height:17px;flex:none;accent-color:var(--brass);margin:0;cursor:pointer;
+}
+
+.note{
+  font-size:13px;color:var(--ink-2);
+  border-left:3px solid var(--brass);
+  padding:2px 0 2px 11px;
+}
+
+/* ---------- uitkomst ---------- */
+.result{
+  display:grid;grid-template-columns:1fr auto;gap:2px 14px;
+  font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-size:14px;
+}
+.result .lbl{font-family:var(--f-body);color:var(--ink-2)}
+.result .big{font-size:20px;font-weight:600}
+.result hr{grid-column:1/-1;border:none;border-top:1px solid var(--rule);margin:6px 0}
+.result hr.heavy{border-top:2px solid var(--ink)}
+
+/* ---------- dealkaarten ---------- */
+.deals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:860px){ .deals{grid-template-columns:1fr} }
+.deal{
+  border:1px solid var(--rule-2);border-radius:4px;
+  background:var(--paper);
+  display:flex;flex-direction:column;
+}
+.deal.pick{border:2px solid var(--good);background:var(--good-soft)}
+.deal > .top{padding:11px 13px;border-bottom:1px solid var(--rule)}
+.deal h3{font-size:16px;letter-spacing:.04em;text-transform:uppercase}
+.deal .sub{font-size:13px;color:var(--ink-2);margin-top:2px}
+.deal > .mid{padding:11px 13px;display:grid;grid-template-columns:1fr auto;gap:3px 10px;font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums}
+.deal .mid .lbl{font-family:var(--f-body);color:var(--ink-2)}
+.deal > .bot{margin-top:auto;padding:11px 13px;border-top:2px solid var(--rule-2)}
+.deal .netlab{font-family:var(--f-disp);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.deal .net{font-family:var(--f-mono);font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.deal .net.neg{color:var(--bad)}
+.deal .net.pos{color:var(--good)}
+.chip{
+  display:inline-block;margin-top:6px;padding:2px 8px;border-radius:99px;
+  font-family:var(--f-disp);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+}
+.chip.ok{background:var(--good-soft);color:var(--good);border:1px solid var(--good)}
+.chip.no{background:var(--bad-soft);color:var(--bad);border:1px solid var(--bad)}
+
+.breakeven{
+  background:var(--brass-soft);border:1px solid var(--brass);border-radius:4px;
+  padding:12px 14px;display:flex;flex-direction:column;gap:3px;
+}
+.breakeven .k{font-family:var(--f-disp);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--brass)}
+.breakeven .v{font-family:var(--f-mono);font-size:23px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--brass)}
+.breakeven p{font-size:13px;color:var(--ink-2)}
+
+button.reset{
+  font-family:var(--f-disp);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+  background:var(--card-2);color:var(--ink-2);
+  border:1px solid var(--rule-2);border-radius:3px;
+  padding:6px 12px;cursor:pointer;
+}
+button.reset:hover{color:var(--ink);border-color:var(--ink-3)}
+
+footer.colofon{
+  font-size:13px;color:var(--ink-3);
+  border-top:1px solid var(--rule);padding-top:14px;
+  display:flex;flex-direction:column;gap:6px;max-width:70ch;
+}
+footer.colofon b{color:var(--ink-2)}
+</style>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="bar-id"><b>Rekenblad</b> plat dak &middot; aanbouw <span id="idMaten">7,00 &times; 6,50 m</span></div>
+    <div class="figs">
+      <div class="fig"><div class="k">Kostprijs</div><div class="v" id="fKost">&euro;0</div></div>
+      <div class="fig"><div class="k">Offerte excl.</div><div class="v" id="fExcl">&euro;0</div></div>
+      <div class="fig lead"><div class="k">Incl. 21% BTW</div><div class="v" id="fIncl">&euro;0</div><div class="sub" id="fPerM2">&euro;0 / m&sup2;</div></div>
+      <div class="fig"><div class="k">Marge</div><div class="v" id="fMarge">&euro;0</div><div class="sub" id="fMargePct">0%</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="lede">
+    <h1>Wat kost dit dak, en wat kun je weggeven?</h1>
+    <p>Geïsoleerd EPDM-platdak op een aanbouw van 45,5 m². Vul je eigen inkoopprijzen en uurtarief in — dan weet je twee dingen: wat je normaal vraagt, en hoeveel je in een ruildeal kwijt kunt zonder erop toe te leggen.</p>
+  </div>
+
+  <!-- ============ 1. MATEN ============ -->
+  <section class="panel">
+    <header><h2>1 &middot; Maten</h2><span class="hint">alles hieronder rekent hierop door</span></header>
+    <div class="body">
+      <div class="grid g3">
+        <label class="field"><span class="lab">Lengte (m)</span><input type="text" inputmode="decimal" id="len" value="7,00"></label>
+        <label class="field"><span class="lab">Breedte (m)</span><input type="text" inputmode="decimal" id="bre" value="6,50"></label>
+        <label class="field"><span class="lab">Aansluiting op de gevel</span>
+          <select id="muur">
+            <option value="len" selected>Tegen gevel — lange zijde</option>
+            <option value="bre">Tegen gevel — korte zijde</option>
+            <option value="geen">Vrijstaand, 4 dakranden</option>
+          </select>
+        </label>
+      </div>
+      <div class="derived">
+        <span>Dakvlak <b id="dOpp">45,50</b> m&sup2;</span>
+        <span>Omtrek <b id="dOmtrek">27,00</b> m1</span>
+        <span>Daktrim <b id="dTrim">20,00</b> m1</span>
+        <span>Muuraansluiting <b id="dMuur">7,00</b> m1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. POSTEN ============ -->
+  <section class="panel">
+    <header><h2>2 &middot; Wat je aanbiedt</h2><span class="hint">prijzen zijn geleverd &eacute;n aangebracht — materiaal + arbeid</span></header>
+    <div class="body">
+      <div class="scroll">
+        <table>
+          <caption>Standaardwerk</caption>
+          <thead><tr><th>Post</th><th>Eenh.</th><th>Aantal</th><th>Prijs p/e</th><th>Totaal</th></tr></thead>
+          <tbody id="tbHoofd"></tbody>
+        </table>
+      </div>
+
+      <div class="scroll">
+        <table>
+          <caption>Meerwerk — aanvinken wat echt nodig is</caption>
+          <thead><tr><th>Post</th><th>Eenh.</th><th>Aantal</th><th>Prijs p/e</th><th>Totaal</th></tr></thead>
+          <tbody id="tbExtra"></tbody>
+          <tfoot><tr class="sum"><td>Offertebedrag excl. BTW</td><td></td><td></td><td></td><td class="num" id="sumExcl">&euro;0</td></tr></tfoot>
+        </table>
+      </div>
+
+      <p class="note">De grijze bedragen onder elk invoerveld zijn de marktbandbreedte voor 2026 (laag&ndash;hoog). Zit je eronder, dan werk je onder de prijs. Zit je erboven, dan moet je kunnen uitleggen waarom.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. KOSTPRIJS ============ -->
+  <section class="panel">
+    <header><h2>3 &middot; Jouw kostprijs</h2><span class="hint">het geld dat echt de deur uit gaat</span></header>
+    <div class="body">
+      <div class="grid g3">
+        <label class="field"><span class="lab">Materiaal inkoop (&euro;)</span><input type="text" inputmode="decimal" id="kMat" value="3250"></label>
+        <label class="field"><span class="lab">Overig: steiger, container, transport (&euro;)</span><input type="text" inputmode="decimal" id="kOver" value="650"></label>
+        <label class="field"><span class="lab">Kostprijs per manuur (&euro;)</span><input type="text" inputmode="decimal" id="kTar" value="45"></label>
+      </div>
+      <div class="grid g4">
+        <label class="field"><span class="lab">Man op het dak</span><input type="text" inputmode="decimal" id="kMan" value="2"></label>
+        <label class="field"><span class="lab">Werkdagen</span><input type="text" inputmode="decimal" id="kDag" value="2,5"></label>
+        <label class="field"><span class="lab">Uren per dag</span><input type="text" inputmode="decimal" id="kUur" value="8"></label>
+        <label class="field"><span class="lab">Manuren totaal</span><input type="text" id="kUurTot" value="40" readonly tabindex="-1"></label>
+      </div>
+
+      <div class="result">
+        <span class="lbl">Materiaal</span><span id="rMat">&euro;0</span>
+        <span class="lbl">Arbeid</span><span id="rArb">&euro;0</span>
+        <span class="lbl">Overig</span><span id="rOver">&euro;0</span>
+        <hr class="heavy">
+        <span class="lbl big">Kostprijs</span><span class="big" id="rKost">&euro;0</span>
+        <hr>
+        <span class="lbl">Offertebedrag excl. BTW</span><span id="rExcl">&euro;0</span>
+        <span class="lbl">BTW 21%</span><span id="rBtw">&euro;0</span>
+        <hr class="heavy">
+        <span class="lbl big">Offerte incl. BTW</span><span class="big" id="rIncl">&euro;0</span>
+        <hr>
+        <span class="lbl">Marge in euro's</span><span id="rMarge">&euro;0</span>
+        <span class="lbl">Marge in procenten</span><span id="rMargePct">0%</span>
+      </div>
+
+      <p class="note">Vink je meerwerk aan in blok 2? Verhoog dan ook je materiaal en je werkdagen hierboven — anders rekent het blad je rijker dan je bent.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. DEAL ============ -->
+  <section class="panel">
+    <header><h2>4 &middot; Werk tegen video's</h2><span class="hint">wat houd je onder de streep over?</span></header>
+    <div class="body">
+
+      <div class="breakeven">
+        <span class="k">Break-evenpunt</span>
+        <span class="v" id="beVal">&euro;0</span>
+        <p>Dit is het maximum dat je aan content kunt ruilen zonder er zelf geld op toe te leggen. Het is precies je marge. Vraagt hij meer dan dit, dan betaal jij het verschil uit eigen zak.</p>
+      </div>
+
+      <div class="deals">
+        <article class="deal" id="d1">
+          <div class="top"><h3>1 &middot; Alles gratis</h3><p class="sub">Volledige offerte wordt weggestreept tegen de content.</p></div>
+          <div class="mid">
+            <span class="lbl">Jouw factuur</span><span id="d1a">&euro;0</span>
+            <span class="lbl">Zijn factuur</span><span id="d1b">&euro;0</span>
+            <span class="lbl">Hij maakt over</span><span id="d1c">&euro;0</span>
+            <span class="lbl">Jouw kosten</span><span id="d1d">&euro;0</span>
+          </div>
+          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d1n">&euro;0</div><span class="chip no">Niet doen</span></div>
+        </article>
+
+        <article class="deal pick" id="d2">
+          <div class="top"><h3>2 &middot; Kosten gedekt</h3><p class="sub">Hij betaalt je kostprijs in geld. Alleen je marge ruil je.</p></div>
+          <div class="mid">
+            <span class="lbl">Jouw factuur</span><span id="d2a">&euro;0</span>
+            <span class="lbl">Zijn factuur</span><span id="d2b">&euro;0</span>
+            <span class="lbl">Hij maakt over</span><span id="d2c">&euro;0</span>
+            <span class="lbl">Jouw kosten</span><span id="d2d">&euro;0</span>
+          </div>
+          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d2n">&euro;0</div><span class="chip ok">Advies</span></div>
+        </article>
+
+        <article class="deal" id="d3">
+          <div class="top">
+            <h3>3 &middot; Zelf instellen</h3>
+            <p class="sub">Wat waardeert hij zijn content op? Vul het in.</p>
+            <label class="field" style="margin-top:8px"><span class="lab">Contentwaarde excl. BTW (&euro;)</span><input type="text" inputmode="decimal" id="cVal" value="3000"></label>
+          </div>
+          <div class="mid">
+            <span class="lbl">Jouw factuur</span><span id="d3a">&euro;0</span>
+            <span class="lbl">Zijn factuur</span><span id="d3b">&euro;0</span>
+            <span class="lbl">Hij maakt over</span><span id="d3c">&euro;0</span>
+            <span class="lbl">Jouw kosten</span><span id="d3d">&euro;0</span>
+          </div>
+          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d3n">&euro;0</div><span class="chip" id="d3chip">&mdash;</span></div>
+        </article>
+      </div>
+
+      <p class="note">Ruilen is niet belastingvrij. Jullie sturen elkaar allebei een echte factuur met BTW, en verrekenen het verschil. De BTW loopt gelijk als hij BTW-plichtig is; gaat het om zijn eigen woning, dan kan hij die 21% niet terugvragen en wordt jouw factuur voor hem een stuk duurder. Vraag dat na voordat je een bedrag noemt.</p>
+
+      <div><button class="reset" id="btnReset" type="button">Standaardwaarden herstellen</button></div>
+    </div>
+  </section>
+
+  <footer class="colofon">
+    <p><b>Richtprijzen, geen leveranciersprijzen.</b> De ingevulde bedragen zijn marktindicaties voor Nederland, 2026. Vervang ze door je eigen inkoop en je eigen uurtarief, anders klopt de uitkomst niet.</p>
+    <p><b>Nog een BTW-punt.</b> Bij isolatiewerk aan woningen ouder dan twee jaar geldt soms 9% over de arbeid. Bij een nieuwe aanbouw meestal gewoon 21%. Even bij je boekhouder checken — dat scheelt honderden euro's, de ene of de andere kant op.</p>
+    <p>Wat je hier invult blijft op dit apparaat staan. Het gaat nergens heen.</p>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  var eur0 = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+  var eur2 = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function money(n){ return eur0.format(isFinite(n)?n:0); }
+  function num2(n){ return eur2.format(isFinite(n)?n:0); }
+  function parse(v){
+    if(v===null||v===undefined) return 0;
+    var s=String(v).replace(/\s/g,'').replace(/\./g,'').replace(',','.');
+    var n=parseFloat(s);
+    return isFinite(n)?n:0;
+  }
+  function $(id){ return document.getElementById(id); }
+
+  /* ---- posten ---- */
+  var HOOFD = [
+    {id:'p1', naam:'Dampremmende laag',                        eenh:'m²', qty:'opp',  prijs:8,   lo:6,  hi:10},
+    {id:'p2', naam:'PIR-isolatie 145 mm, Rc 6,3',              eenh:'m²', qty:'opp',  prijs:47,  lo:40, hi:55},
+    {id:'p3', naam:'EPDM 1,5 mm, volledig verkleefd',          eenh:'m²', qty:'opp',  prijs:50,  lo:40, hi:60},
+    {id:'p4', naam:'Aluminium daktrim',                        eenh:'m1', qty:'trim', prijs:28,  lo:22, hi:35},
+    {id:'p5', naam:'Muuraansluiting + loodslabbe',              eenh:'m1', qty:'muur', prijs:45,  lo:35, hi:55},
+    {id:'p6', naam:'Hemelwaterafvoer, compleet',               eenh:'st', qty:1,      prijs:275, lo:200,hi:350, qtyEdit:true},
+    {id:'p7', naam:'Kleinmateriaal, hoekstukken, lijm, kit',   eenh:'post',qty:1,     prijs:325, lo:250,hi:400},
+    {id:'p8', naam:'Steiger en materieel',                      eenh:'post',qty:1,     prijs:450, lo:300,hi:600},
+    {id:'p9', naam:'Afvoer bouwafval en transport',             eenh:'post',qty:1,     prijs:300, lo:200,hi:400}
+  ];
+  var EXTRA = [
+    {id:'x1', naam:'Slopen + afvoeren bestaande dakbedekking', eenh:'m²', qty:'opp',  prijs:20,  lo:15,  hi:25},
+    {id:'x2', naam:'Nieuw dakbeschot 18 mm',                   eenh:'m²', qty:'opp',  prijs:45,  lo:35,  hi:55},
+    {id:'x3', naam:'Lichtkoepel 100×100, incl. opstand',       eenh:'st', qty:1,      prijs:1150,lo:700, hi:1600, qtyEdit:true},
+    {id:'x4', naam:'Dakrandbetimmering / boeideel',            eenh:'m1', qty:'trim', prijs:47,  lo:35,  hi:60},
+    {id:'x5', naam:'Extra hemelwaterafvoer',                   eenh:'st', qty:1,      prijs:275, lo:200, hi:350, qtyEdit:true}
+  ];
+
+  function rowHTML(p, opt){
+    var qtyCell = (typeof p.qty === 'number' || p.qtyEdit)
+      ? '<input type="text" inputmode="decimal" id="q_'+p.id+'" value="'+p.qty+'">'
+      : '<span id="q_'+p.id+'">0</span>';
+    var first = opt
+      ? '<span class="chk"><input type="checkbox" id="on_'+p.id+'"><label for="on_'+p.id+'">'+p.naam+'</label></span>'
+      : p.naam;
+    return '<tr id="row_'+p.id+'"'+(opt?' class="opt off"':'')+'>'
+      + '<td>'+first+'</td>'
+      + '<td class="num unit">'+p.eenh+'</td>'
+      + '<td class="num">'+qtyCell+'</td>'
+      + '<td class="num"><input type="text" inputmode="decimal" id="pr_'+p.id+'" value="'+String(p.prijs).replace('.',',')+'">'
+      +   '<span class="range">'+p.lo+'&ndash;'+p.hi+'</span></td>'
+      + '<td class="num" id="tot_'+p.id+'">&euro;0</td></tr>';
+  }
+  $('tbHoofd').innerHTML = HOOFD.map(function(p){ return rowHTML(p,false); }).join('');
+  $('tbExtra').innerHTML = EXTRA.map(function(p){ return rowHTML(p,true); }).join('');
+
+  /* ---- opslaan op dit apparaat ---- */
+  var KEY = 'platdak-rekenblad-v1';
+  function allFields(){
+    return Array.prototype.slice.call(document.querySelectorAll('input[type=text]:not([readonly]), input[type=checkbox], select'));
+  }
+  function save(){
+    try{
+      var o={};
+      allFields().forEach(function(el){ o[el.id] = (el.type==='checkbox') ? el.checked : el.value; });
+      localStorage.setItem(KEY, JSON.stringify(o));
+    }catch(e){ /* private window of geblokkeerde opslag: gewoon doorgaan */ }
+  }
+  function load(){
+    try{
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var o = JSON.parse(raw);
+      allFields().forEach(function(el){
+        if(!(el.id in o)) return;
+        if(el.type==='checkbox'){ el.checked = !!o[el.id]; } else { el.value = o[el.id]; }
+      });
+    }catch(e){ /* onleesbaar: standaardwaarden blijven staan */ }
+  }
+
+  /* ---- rekenen ---- */
+  function calc(){
+    var L = parse($('len').value), B = parse($('bre').value);
+    var opp = L*B;
+    var omtrek = 2*(L+B);
+    var m = $('muur').value;
+    var muur = (m==='len') ? L : (m==='bre') ? B : 0;
+    var trim = omtrek - muur;
+
+    $('dOpp').textContent = num2(opp);
+    $('dOmtrek').textContent = num2(omtrek);
+    $('dTrim').textContent = num2(trim);
+    $('dMuur').textContent = num2(muur);
+    $('idMaten').textContent = num2(L)+' × '+num2(B)+' m';
+
+    var qtyOf = { opp:opp, trim:trim, muur:muur };
+
+    function sumSet(list, optional){
+      var t = 0;
+      list.forEach(function(p){
+        var aan = optional ? $('on_'+p.id).checked : true;
+        var row = $('row_'+p.id);
+        if(optional) row.className = 'opt' + (aan ? '' : ' off');
+
+        var q;
+        if(typeof p.qty === 'number' || p.qtyEdit){ q = parse($('q_'+p.id).value); }
+        else { q = qtyOf[p.qty]; $('q_'+p.id).textContent = num2(q); }
+
+        var bedrag = aan ? q * parse($('pr_'+p.id).value) : 0;
+        $('tot_'+p.id).innerHTML = aan ? money(bedrag) : '&mdash;';
+        t += bedrag;
+      });
+      return t;
+    }
+
+    var excl = sumSet(HOOFD,false) + sumSet(EXTRA,true);
+    var btw  = excl * 0.21;
+    var incl = excl + btw;
+
+    $('sumExcl').textContent = money(excl);
+
+    /* kostprijs */
+    var mat  = parse($('kMat').value);
+    var over = parse($('kOver').value);
+    var uren = parse($('kMan').value) * parse($('kDag').value) * parse($('kUur').value);
+    var arb  = uren * parse($('kTar').value);
+    var kost = mat + arb + over;
+
+    $('kUurTot').value = num2(uren);
+    $('rMat').textContent  = money(mat);
+    $('rArb').textContent  = money(arb);
+    $('rOver').textContent = money(over);
+    $('rKost').textContent = money(kost);
+    $('rExcl').textContent = money(excl);
+    $('rBtw').textContent  = money(btw);
+    $('rIncl').textContent = money(incl);
+
+    var marge = excl - kost;
+    var margePct = excl > 0 ? (marge/excl*100) : 0;
+    $('rMarge').textContent = money(marge);
+    $('rMargePct').textContent = num2(margePct)+'%';
+
+    /* plakbalk */
+    $('fKost').textContent = money(kost);
+    $('fExcl').textContent = money(excl);
+    $('fIncl').textContent = money(incl);
+    $('fPerM2').textContent = (opp>0 ? money(incl/opp) : money(0)) + ' / m²';
+    $('fMarge').textContent = money(marge);
+    $('fMarge').className = 'v ' + (marge < 0 ? 'neg' : 'pos');
+    $('fMargePct').textContent = num2(margePct)+'%';
+
+    /* dealmodellen — netto = (offerte excl. − contentwaarde excl.) − kostprijs */
+    $('beVal').textContent = money(Math.max(marge,0));
+
+    function model(pre, content, chipEl){
+      var mijn = incl;
+      var zijn = content * 1.21;
+      var over2 = mijn - zijn;
+      var netto = (excl - content) - kost;
+      $(pre+'a').textContent = money(mijn);
+      $(pre+'b').textContent = money(zijn);
+      $(pre+'c').textContent = money(over2);
+      $(pre+'d').textContent = '−' + money(kost);
+      var n = $(pre+'n');
+      n.textContent = (netto >= 0 ? '' : '−') + money(Math.abs(netto));
+      n.className = 'net ' + (netto < -1 ? 'neg' : 'pos');
+      if(chipEl){
+        chipEl.textContent = netto >= -1 ? 'Kan uit' : 'Je legt toe';
+        chipEl.className = 'chip ' + (netto >= -1 ? 'ok' : 'no');
+      }
+      return netto;
+    }
+
+    model('d1', excl, null);
+    model('d2', Math.max(marge,0), null);
+    model('d3', parse($('cVal').value), $('d3chip'));
+
+    save();
+  }
+
+  document.addEventListener('input', calc);
+  document.addEventListener('change', calc);
+
+  $('btnReset').addEventListener('click', function(){
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    location.reload();
+  });
+
+  load();
+  calc();
+})();
+</script>
