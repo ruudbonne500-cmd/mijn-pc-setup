@@ -2,17 +2,18 @@
 
 Alleen lezen als je de ruil serieus overweegt.
 
-Dit bestand is lang. Lees het in 4 blokken, met een pauze ertussen als dat helpt:
+Dit bestand is lang. Lees het in 5 blokken, met een pauze ertussen als dat helpt:
 
-- **Blok 1** - Waar het misgaat (5 min)
-- **Blok 2** - De belastingregel die de meeste mensen niet kennen (5 min)
-- **Blok 3** - Drie manieren om het te doen, met bedragen (10 min)
-- **Blok 4** - Wat er op papier moet (10 min)
+- **Blok 1** - Wat het je kost (5 min)
+- **Blok 2** - Wat het je oplevert (5 min)
+- **Blok 3** - De belastingregel die de meeste mensen niet kennen (5 min)
+- **Blok 4** - Drie manieren om het te doen, met bedragen (10 min)
+- **Blok 5** - Wat er op papier moet (10 min)
 
 ---
 ---
 
-# Blok 1 - Waar het misgaat
+# Blok 1 - Wat het je kost
 
 ## Het probleem in één zin
 
@@ -67,7 +68,70 @@ Netto zakt je marge van ongeveer 1.300 naar ongeveer 730 euro.
 ---
 ---
 
-# Blok 2 - De belastingregel
+# Blok 2 - Wat het je oplevert
+
+Blok 1 gaat over de kostenkant. Nu de andere kant, want die is echt wat waard.
+
+## Je koopt geen "exposure". Je koopt een reclamefilm.
+
+Dat is een belangrijk verschil. Vaag bereik is weinig waard. Een **promotievideo voor jouw bedrijf, met een bekend gezicht erin, die jij zelf mag gebruiken** is een bezit. Die kun je jarenlang inzetten.
+
+Wat zoiets normaal kost als je het gewoon inkoopt:
+
+| Wat | Marktprijs |
+| --- | --- |
+| Professionele bedrijfsvideo: opname, montage, geluid | 2.000 - 7.500 |
+| Een bekende Nederlander als gezicht, met gebruiksrechten | 5.000 - 25.000 |
+| **Samen** | **7.000 - 30.000** |
+
+Zijn opmerking over tienduizenden euro's is dus niet overdreven. Dat is een normaal tarief voor wat hij aanbiedt.
+
+**Dat betekent: de content kan best meer waard zijn dan jouw marge van 729 euro.** En dan is het geen verlies dat je erop toelegt, dan is het een marketinginvestering. Zoals je ook betaalt voor een bus met belettering of een advertentie.
+
+## De enige vraag die telt: hoeveel klussen levert het op?
+
+Zo reken je het om naar iets waar je een besluit op kunt nemen.
+
+Stel je verdient gemiddeld **1.000 euro marge per dak**.
+
+| Contentwaarde | Wat jij bijlegt | Terugverdiend na |
+| --- | --- | --- |
+| 729 (je marge) | 0 | direct |
+| 1.500 | 772 | 1 klus |
+| 3.000 | 2.272 | 2 tot 3 klussen |
+| 5.000 | 4.272 | 4 tot 5 klussen |
+| 6.639 (helemaal gratis) | 5.910 | 6 klussen |
+
+**Zo ziet het er ineens heel anders uit.** Twee of drie extra daken uit een video met Roy Donders is geen gekke verwachting. Dan is zelfs het scenario van 3.000 euro een prima investering.
+
+Gebruik `rekenblad.html`: daar vul je je eigen marge per klus in en zie je dit getal live meelopen.
+
+## Maar dan moet je die video wel echt kunnen gebruiken
+
+Hier zit de hele waarde, en hier gaat het het vaakst mis.
+
+Een leuke opnamedag waarna hij één video op zijn eigen account zet en jij verder niks mag: dat is **niks waard**. Na twee weken is die post weg en heb jij een dak weggegeven.
+
+Wat het wél waardevol maakt:
+
+| Zonder afspraak | Met afspraak op papier |
+| --- | --- |
+| Video staat alleen op zijn kanaal | Staat ook op die van jou, permanent |
+| Jij mag hem niet in advertenties gebruiken | Jij mag hem in betaalde advertenties draaien |
+| Je mag zijn naam niet noemen | Je mag zijn naam en beeld gebruiken in je reclame |
+| Je hebt geen bestanden | Je krijgt de ruwe beelden in hoge kwaliteit |
+| Waarde: bijna niks | Waarde: jarenlang inzetbaar |
+
+**Zonder schriftelijke toestemming mag je zijn portret en naam niet in je reclame gebruiken.** Dat is portretrecht, en dat is geen detail: dat is precies het stuk dat jou klanten oplevert.
+
+Dat vraag je niet omdat je hem wantrouwt. Je vraagt het omdat je er anders niks mee kunt. Dat is een normaal, professioneel gesprek, en hij kent dat gesprek - hij doet dit vaker.
+
+De complete lijst staat in blok 5, onderdeel C.
+
+---
+---
+
+# Blok 3 - De belastingregel
 
 ## Ruilen is niet belastingvrij
 
@@ -102,7 +166,7 @@ Beide facturen gaan in de boeken. Daarna verreken je ze tegen elkaar. Dat heet "
 ---
 ---
 
-# Blok 3 - Drie manieren om het te doen
+# Blok 4 - Drie manieren om het te doen
 
 Ik reken met het middenscenario. **Vul je eigen getallen in.**
 
@@ -185,7 +249,11 @@ Stel hij zegt: mijn content is 3.000 waard.
 | 6.639 - 3.000 - 5.910 | |
 | **Onder de streep** | **-2.272** |
 
-Dat is geen ramp als je die content echt 2.272 euro waard vindt bovenop je weggegeven marge. Maar weet dan wel dat je **2.272 euro uit eigen zak betaalt** om erbij te mogen staan. Neem dat besluit bewust, niet per ongeluk.
+Je legt hier 2.272 euro bij. Dat is geen verlies zolang je het als marketingbudget ziet: bij 1.000 euro marge per klus heb je het na **2 tot 3 nieuwe daken** terugverdiend, en alles daarna is winst.
+
+Voorwaarde is wel dat je de video echt mag gebruiken - website, socials, betaalde advertenties, en zijn naam erbij. Zie blok 2. Zonder die rechten betaal je 2.272 euro voor een leuke dag.
+
+**Dit is een prima model**, mits je het bewust kiest en de rechten op papier staan.
 
 ---
 
@@ -207,7 +275,8 @@ Gebruik `rekenblad.html` om dit met je eigen cijfers te zien - daar schuift het 
 | Je hebt een drukmiddel | Nee | Ja | Ja |
 | Administratief netjes | Ja | Ja | Ja |
 | Risico als video's uitblijven | Groot | Klein | Klein |
-| **Advies** | Niet doen | **Doen** | Alleen bewust |
+| Terugverdiend na (1.000 marge/klus) | 6 klussen | direct | 2 tot 3 klussen |
+| **Advies** | Te veel risico | Veiligste keuze | Prima, mits rechten geregeld |
 
 ---
 
@@ -226,7 +295,7 @@ Je hoeft hierbij niet wantrouwig te doen. Je zegt gewoon: *"Ik zet het even netj
 ---
 ---
 
-# Blok 4 - Wat er op papier moet
+# Blok 5 - Wat er op papier moet
 
 Niet om moeilijk te doen. Juist het tegenovergestelde: als het op papier staat, hoef je er nooit meer ruzie over te maken.
 
@@ -298,10 +367,17 @@ Voor als het gesprek die kant op gaat:
 
 ## Tot slot, eerlijk
 
-Dit kán een hele goede deal zijn. Content met iemand met bereik, in jouw vak, is echt wat waard - vooral als je het **zelf in advertenties mag gebruiken**. Dat is het stuk waar de meeste ondernemers overheen kijken, en dat is nou net het stuk dat klanten oplevert.
+Dit kan een hele goede deal zijn. Een promotievideo met een bekend gezicht, in jouw vak, is echt wat waard - zeker als je hem **zelf in advertenties mag gebruiken**. Dat is het stuk waar de meeste ondernemers overheen kijken, en het is precies het stuk dat klanten oplevert.
 
-Maar dan moet het wel een échte deal zijn: twee kanten, twee waardes, op papier.
+Waar het om draait is dit:
 
-"Gratis in ruil voor exposure" zonder papier is geen deal. Dat is hopen.
+> **Niet: wat kost het mij?**
+> **Maar: hoeveel klussen moet het opleveren, en mag ik die video echt gebruiken?**
 
-Doe Model 2. Zet het op papier. Maak er iets moois van. 💪
+Kost het je 2.272 euro en levert het twee daken op, dan sta je quitte en heb je er een reclamefilm bij die je jaren kunt draaien. Dat is een goede deal.
+
+Levert het niks op omdat je de beelden niet mag gebruiken, dan had je net zo goed 2.272 euro kunnen verbranden.
+
+Het verschil tussen die twee is **één A4 met afspraken**. Meer niet.
+
+Dus: kies bewust welk model je wilt, zorg dat de rechten op papier staan, en maak er iets moois van. 💪

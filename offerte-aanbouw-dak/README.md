@@ -27,16 +27,19 @@ Daarnaast: **`rekenblad.html`** - open dit in je browser. Daarin schuif je je ei
 
 1. **Stuur nog geen prijs.** Je weet nog niet of het dak eraf moet, of er isolatie in moet, of er een lichtkoepel in komt. Dat scheelt duizenden euro's.
 2. **Stuur stap 4** (het WhatsApp-antwoord). Daarin stel je de vragen en zeg je dat de offerte deze week komt.
-3. **Zeg nog geen ja tegen gratis.** Niet nee, maar ook geen ja. Zie stap 5.
+3. **Zeg nog geen ja tegen gratis.** Niet nee, maar ook geen ja - eerst de gebruiksrechten bespreken. Zie stap 5.
 
 ---
 
-## De belangrijkste regel van dit hele dossier
+## De twee regels van dit hele dossier
 
-> **Materiaal betaal je met geld, niet met bereik.**
+> **1. Materiaal betaal je met geld, niet met bereik.**
 
-Jouw leverancier stuurt een rekening van een paar duizend euro. Die rekening kun je niet betalen met video's.
-Dus: wat je ook afspreekt, de kosten komen altijd contant binnen. Zie `05-ruildeal.md`.
+Jouw leverancier stuurt een rekening van een paar duizend euro. Die rekening kun je niet betalen met video's. Wat je ook afspreekt: zorg dat je kosten gedekt zijn.
+
+> **2. Een video die je niet mag gebruiken, is niks waard.**
+
+Een promotievideo met Roy Donders kan een prima investering zijn - maar alleen als je hem op je eigen kanalen mag zetten, in betaalde advertenties mag draaien, en zijn naam erbij mag noemen. Zonder schriftelijke toestemming mag dat niet. Dat regel je met één A4. Zie `05-ruildeal.md`, blok 2.
 
 ## En de belangrijkste getallen
 

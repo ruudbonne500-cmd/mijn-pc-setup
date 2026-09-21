@@ -45,20 +45,27 @@ Drie versies. Kies er een, kopieer, pas je naam aan, versturen.
 
 ---
 
-## Versie C - Als je de ruil echt wilt doen
+## Versie C - Je wilt de deal, en je wilt hem goed
 
-> Hee Roy, top 👍
+Dit is de versie als je enthousiast bent. Hij is warm, maar regelt ondertussen het enige wat er echt toe doet: dat je die video ook mag gebruiken.
+
+> Hee Roy, top 👍 Ik heb er even over nagedacht en ik doe graag mee. Een promotievideo met jou erin is voor mij echt wat waard, dus daar wil ik zeker afspraken over maken.
 >
-> Ik heb er even goed over nagedacht en ik doe graag mee. Even hoe ik het voor me zie, dan weten we allebei waar we aan toe zijn:
+> Even hoe ik het voor me zie, dan weten we allebei waar we aan toe zijn:
 >
-> Ik maak eerst de normale offerte, zodat we allebei zien wat het werk waard is. Daarna spreken we af hoe we het verrekenen. Mijn voorstel:
+> Ik maak eerst de normale offerte, zodat we allebei zien wat het werk waard is. Daarna spreken we af hoe we verrekenen. Ik ben flexibel in mijn uren, maar het materiaal moet ik contant inkopen bij de leverancier, dus dat deel moet wel doorlopen.
 >
-> - Jij betaalt de kosten: materiaal, steiger, container, afvoer. Dat gaat rechtstreeks naar leveranciers, daar kan ik niks aan doen.
-> - Mijn uren en winst verreken ik tegen de video's.
-> - We factureren allebei netjes, zodat het voor de belasting klopt. Dat moet sowieso bij een ruil.
-> - En we zetten even op papier wat we precies afspreken: hoeveel video's, waar ze komen, hoe lang ze blijven staan, en of ik ze zelf ook mag gebruiken voor mijn eigen socials en advertenties.
+> Waar ik het vooral over wil hebben is wat ik met de video mag:
 >
-> Niet om moeilijk te doen, juist om het makkelijk te houden. Dan weet iedereen wat hij krijgt en hoeven we het er later niet meer over te hebben. Ik stuur de offerte plus een A4'tje met de afspraken, kijk jij er even naar? 🙏
+> 1. Mag ik hem op mijn eigen socials en website zetten, en blijft hij daar staan?
+> 2. Mag ik hem gebruiken in betaalde advertenties? Dat is voor mij het belangrijkste.
+> 3. Mag ik je naam erbij noemen in die uitingen?
+> 4. Krijg ik de ruwe beelden aangeleverd?
+> 5. Hoeveel video's en wanneer ongeveer?
+>
+> Vraag ik niet om moeilijk te doen - juist omdat ik er iets goeds mee wil doen. Als ik hem alleen mag bekijken heb ik er weinig aan, en als ik hem mag inzetten is het voor mij een investering waard.
+>
+> Ik zet het even op één A4 samen met de offerte, dan hoeven we het er later niet meer over te hebben. Kijk jij er even naar? 🙏
 
 ---
 
@@ -78,14 +85,14 @@ Drie versies. Kies er een, kopieer, pas je naam aan, versturen.
 
 Hij zegt: bedrijven betalen mij tienduizenden euro's hiervoor.
 
-Dat kan prima kloppen. Dat is zijn tarief.
-Maar let op het verschil:
+**Dat klopt waarschijnlijk gewoon.** Een bedrijfsvideo laten maken kost 2.000 tot 7.500 euro, en een bekende Nederlander als gezicht met gebruiksrechten erbij loopt al snel naar de 5.000 tot 25.000. Dat is een normaal tarief voor wat hij aanbiedt.
 
-- **Zijn tarief** = wat hij normaal vraagt.
-- **Jouw opbrengst** = wat die video's jou aan klussen opleveren.
+Dus behandel het niet als opschepperij. Het is een serieus aanbod.
 
-Die twee zijn niet hetzelfde. Een video kan 500.000 keer bekeken worden en nul daken opleveren. Of drie daken. Je weet het niet vooraf.
+Twee dingen om wel scherp te houden:
 
-Dus: het is een mooi aanbod, maar het is **geen argument om jouw materiaalkosten weg te strepen**. Laat je niet meepraten in zijn rekensom. Jij hebt je eigen rekensom, en die staat in `02-calculatie.md`.
+**1. Zijn tarief is niet automatisch jouw opbrengst.** Wat het jou waard is, hangt af van hoeveel daken het oplevert. Reken het om: kost het je 2.272 euro en verdien je 1.000 per klus, dan heb je het na 2 à 3 daken terug. Dat is een reëel getal, geen gok.
 
-En bij bitumen is die rekensom krapper dan je denkt: je marge is ongeveer **730 euro**, niet een paar duizend. Meer dan dat weggeven kost je echt geld. Zie `05-ruildeal.md`.
+**2. De waarde zit in wat je ermee mag.** Een video die alleen op zijn kanaal staat en waar jij niks mee mag, is voor jou bijna niks waard. Dezelfde video die je in je eigen advertenties mag draaien, met zijn naam erbij, is jarenlang inzetbaar.
+
+Dat is het hele verschil, en het kost je één A4 om te regelen. Zie `05-ruildeal.md`, blok 2 en blok 5.

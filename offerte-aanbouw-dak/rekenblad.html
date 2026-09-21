@@ -233,6 +233,11 @@ input[type=checkbox]{
 }
 .chip.ok{background:var(--good-soft);color:var(--good);border:1px solid var(--good)}
 .chip.no{background:var(--bad-soft);color:var(--bad);border:1px solid var(--bad)}
+.payback{
+  margin-top:7px;padding-top:7px;border-top:1px dashed var(--rule-2);
+  font-size:13px;color:var(--ink-2);
+}
+.payback b{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
 
 .breakeven{
   background:var(--brass-soft);border:1px solid var(--brass);border-radius:4px;
@@ -374,25 +379,30 @@ footer.colofon b{color:var(--ink-2)}
 
   <!-- ============ 4. DEAL ============ -->
   <section class="panel">
-    <header><h2>4 &middot; Werk tegen video's</h2><span class="hint">wat houd je onder de streep over?</span></header>
+    <header><h2>4 &middot; Werk tegen video's</h2><span class="hint">wat kost het, en na hoeveel klussen heb je het terug?</span></header>
     <div class="body">
 
       <div class="breakeven">
         <span class="k">Break-evenpunt</span>
         <span class="v" id="beVal">&euro;0</span>
-        <p>Dit is het maximum dat je aan content kunt ruilen zonder er zelf geld op toe te leggen. Het is precies je marge. Vraagt hij meer dan dit, dan betaal jij het verschil uit eigen zak.</p>
+        <p>Tot dit bedrag kun je aan content ruilen zonder er geld op toe te leggen — het is precies je marge. Meer weggeven mag prima, als je maar weet na hoeveel klussen je het terugverdient. Dat rekent hij hieronder voor je uit.</p>
       </div>
+
+      <div class="grid g3">
+        <label class="field"><span class="lab">Marge per nieuwe klus (&euro;)</span><input type="text" inputmode="decimal" id="klusMarge" value="1000"></label>
+      </div>
+      <p class="note">Wat verdien je gemiddeld aan een dak? Dat getal bepaalt of deze deal uit kan. Een promotievideo met een bekend gezicht kost normaal 7.000 tot 30.000 euro om in te kopen — dus als hij je twee of drie klussen oplevert, is er veel mogelijk.</p>
 
       <div class="deals">
         <article class="deal" id="d1">
-          <div class="top"><h3>1 &middot; Alles gratis</h3><p class="sub">Volledige offerte wordt weggestreept tegen de content.</p></div>
+          <div class="top"><h3>1 &middot; Alles gratis</h3><p class="sub">Volledige offerte wordt weggestreept tegen de content. Je kosten lopen door.</p></div>
           <div class="mid">
             <span class="lbl">Jouw factuur</span><span id="d1a">&euro;0</span>
             <span class="lbl">Zijn factuur</span><span id="d1b">&euro;0</span>
             <span class="lbl">Hij maakt over</span><span id="d1c">&euro;0</span>
             <span class="lbl">Jouw kosten</span><span id="d1d">&euro;0</span>
           </div>
-          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d1n">&euro;0</div><span class="chip no">Niet doen</span></div>
+          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d1n">&euro;0</div><span class="chip no">Veel risico</span><div class="payback" id="d1p"></div></div>
         </article>
 
         <article class="deal pick" id="d2">
@@ -403,13 +413,13 @@ footer.colofon b{color:var(--ink-2)}
             <span class="lbl">Hij maakt over</span><span id="d2c">&euro;0</span>
             <span class="lbl">Jouw kosten</span><span id="d2d">&euro;0</span>
           </div>
-          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d2n">&euro;0</div><span class="chip ok">Advies</span></div>
+          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d2n">&euro;0</div><span class="chip ok">Advies</span><div class="payback" id="d2p"></div></div>
         </article>
 
         <article class="deal" id="d3">
           <div class="top">
             <h3>3 &middot; Zelf instellen</h3>
-            <p class="sub">Wat waardeert hij zijn content op? Vul het in.</p>
+            <p class="sub">Wat is de video waard? Een bedrijfsvideo met bekend gezicht kost normaal 7.000 tot 30.000.</p>
             <label class="field" style="margin-top:8px"><span class="lab">Contentwaarde excl. BTW (&euro;)</span><input type="text" inputmode="decimal" id="cVal" value="3000"></label>
           </div>
           <div class="mid">
@@ -418,7 +428,7 @@ footer.colofon b{color:var(--ink-2)}
             <span class="lbl">Hij maakt over</span><span id="d3c">&euro;0</span>
             <span class="lbl">Jouw kosten</span><span id="d3d">&euro;0</span>
           </div>
-          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d3n">&euro;0</div><span class="chip" id="d3chip">&mdash;</span></div>
+          <div class="bot"><span class="netlab">Onder de streep</span><div class="net" id="d3n">&euro;0</div><span class="chip" id="d3chip">&mdash;</span><div class="payback" id="d3p"></div></div>
         </article>
       </div>
 
@@ -431,6 +441,7 @@ footer.colofon b{color:var(--ink-2)}
   <footer class="colofon">
     <p><b>Richtprijzen, geen leveranciersprijzen.</b> De ingevulde bedragen zijn marktindicaties voor Nederland, 2026. Vervang ze door je eigen inkoop en je eigen uurtarief, anders klopt de uitkomst niet.</p>
     <p><b>Nog een BTW-punt.</b> Bij isolatiewerk aan woningen ouder dan twee jaar geldt soms 9% over de arbeid. Bij een nieuwe aanbouw meestal gewoon 21%. Even bij je boekhouder checken — dat scheelt honderden euro's, de ene of de andere kant op.</p>
+    <p><b>Een video die je niet mag gebruiken is niks waard.</b> De hele waarde zit in de gebruiksrechten: op je eigen kanalen, in betaalde advertenties, en met zijn naam erbij. Zonder schriftelijke toestemming mag dat niet. Regel dat op papier voordat je begint.</p>
     <p><b>Bitumen is goedkoper voor de klant, niet voor jou.</b> Het materiaal scheelt ongeveer 150 euro in jouw voordeel, maar twee lagen aanbrengen kost een halve tot hele dag meer dan één vel EPDM verlijmen. Zet de schakelaar in blok 2 om en kijk wat dat met je marge doet.</p>
     <p>Wat je hier invult blijft op dit apparaat staan. Het gaat nergens heen.</p>
   </footer>
@@ -589,6 +600,8 @@ footer.colofon b{color:var(--ink-2)}
     /* dealmodellen — netto = (offerte excl. − contentwaarde excl.) − kostprijs */
     $('beVal').textContent = money(Math.max(marge,0));
 
+    var klusMarge = parse($('klusMarge').value);
+
     function model(pre, content, chipEl){
       var mijn = incl;
       var zijn = content * 1.21;
@@ -601,9 +614,19 @@ footer.colofon b{color:var(--ink-2)}
       var n = $(pre+'n');
       n.textContent = (netto >= 0 ? '' : '−') + money(Math.abs(netto));
       n.className = 'net ' + (netto < -1 ? 'neg' : 'pos');
+
+      /* wat je bijlegt, omgerekend naar nieuwe klussen */
+      var tekort = Math.max(0, -netto);
+      var klussen = (klusMarge > 0) ? tekort / klusMarge : 0;
+      var pb = $(pre+'p');
+      if(pb){
+        pb.innerHTML = (tekort < 1)
+          ? 'Kost je niets — je marge dekt de ruil.'
+          : 'Terugverdiend na <b>' + (klussen < 1 ? '1' : Math.ceil(klussen)) + '</b> nieuwe ' + (Math.ceil(klussen) === 1 ? 'klus' : 'klussen') + '.';
+      }
       if(chipEl){
-        chipEl.textContent = netto >= -1 ? 'Kan uit' : 'Je legt toe';
-        chipEl.className = 'chip ' + (netto >= -1 ? 'ok' : 'no');
+        chipEl.textContent = tekort < 1 ? 'Kan uit' : (klussen <= 3 ? 'Haalbaar' : 'Veel klussen nodig');
+        chipEl.className = 'chip ' + (klussen <= 3 ? 'ok' : 'no');
       }
       return netto;
     }
